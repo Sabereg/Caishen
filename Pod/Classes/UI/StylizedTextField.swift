@@ -93,7 +93,7 @@ open class StylizedTextField: UITextField, UITextFieldDelegate {
     
     @discardableResult
     override open func becomeFirstResponder() -> Bool {
-        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self)
+        UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged, argument: UIAccessibility.Notification.screenChanged)
         return super.becomeFirstResponder()
     }
     
